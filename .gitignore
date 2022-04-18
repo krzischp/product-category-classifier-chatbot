@@ -127,3 +127,16 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# model
+analise-sentimentos/assets/best_model_state.bin
+
+# Firebase
+analise-sentimentos/bookdevopsml1-*.json
+
+# Database
+chatbot/db.sqlite3-shm
+chatbot/db.sqlite3-wal
+
+# CSV data
+project_notebook/produtos.csv
