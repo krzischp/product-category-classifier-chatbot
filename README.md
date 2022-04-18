@@ -28,7 +28,7 @@ cd eml1-at2/chatbot
 Enter in another terminal:
 ```bash
 cd eml1-at2/analise-sentimentos
-`/Users/pierre.krzisch/.pyenv/versions/3.8.12/envs/analise-sentimentos/bin/python app.py`
+/Users/pierre.krzisch/.pyenv/versions/3.8.12/envs/analise-sentimentos/bin/python app.py
 ```
 
 - This service will detect the emotion of the user
