@@ -2,7 +2,7 @@ In this project, we built a new solution to put into production the results of t
 
 The idea of this solution is to be able to monitor **the level of satistfaction** of the users about the product categories of our e-commerce website, and also to be able to **redirect more efficiently** to the right support channel (if the sentiment is negative), by associating a product category to our user's sentence and storing it in our Firebase database `messages`.
 
-Then we could pretty well imagine our Business Analysts doing the job of looking at thing like:
+Then we could pretty well imagine our Business Analysts doing the job of looking at things like:
 - the global percentage of negative sentiments
 - the global percentage of negative sentiments by product category
 - the global percentage of negative sentiments by user name and product category
@@ -65,3 +65,7 @@ export FLASK_DEBUG=1
 /Users/pierre.krzisch/.pyenv/versions/3.10.2/envs/http-api-flask/bin/flask run
 ```
 Then you can request the url in `product-category-classifier-chatbot/http-api/tests.http` if you've installed the [following plugin](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for VS code before. It will list all the messages that have been written in the Firebase database `messages`.
+
+
+# References
+[Pratica devops com docker para machine learning](https://aurimrv.gitbook.io/pratica-devops-com-docker-para-machine-learning/)
