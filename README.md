@@ -18,6 +18,8 @@ In this **README** step by step, we assume you've already installed the followin
 - http-api-flask
 - jupyter-dev
 
+Before to start, you also need to download the BERT model [here](https://drive.google.com/file/d/1d4RBMWwnzFBaPL2TSu-X1lfb3GLv1Pz5/view) and to save it in the following folder: `analise-sentimentos/assets`.
+
 Else, you can follow the [guideline](https://aurimrv.gitbook.io/pratica-devops-com-docker-para-machine-learning/2-desenvolvimento/2-1-do-notebook-para-aplicacao-parte-1) of this [book](https://aurimrv.gitbook.io/pratica-devops-com-docker-para-machine-learning/).
 
 # Services initialization
@@ -36,14 +38,14 @@ bin/kafka-server-start.sh config/server.properties
 # Start the chatbot thread
 Enter in another terminal:
 ```bash
-cd eml1-at2/chatbot
+cd product-category-classifier-chatbot/chatbot
 /Users/pierre.krzisch/.pyenv/versions/3.6.15/envs/chatbot/bin/python app.py
 ```
 
 # Start the sentiment analysis and product category identifier service
 Enter in another terminal:
 ```bash
-cd eml1-at2/analise-sentimentos
+cd product-category-classifier-chatbot/analise-sentimentos
 `/Users/pierre.krzisch/.pyenv/versions/3.8.12/envs/analise-sentimentos/bin/python app.py`
 ```
 
@@ -58,8 +60,8 @@ The idea is to be able to monitor the level of satistfaction of the users about 
 
 # List database messages result
 ```bash
-cd eml1-at2/http-api
+cd product-category-classifier-chatbot/http-api
 export FLASK_DEBUG=1
-/Users/pierre.krzisch/.pyenv/versions/3.10.2/envs/http-api-flask/bin/flask
+/Users/pierre.krzisch/.pyenv/versions/3.10.2/envs/http-api-flask/bin/flask run
 ```
-Then you can request the url in `eml1-at2/http-api/tests.http` if you've installed the [following plugin](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for VS code before. It will list all the messages that have been written in the Firebase database `messages`.
+Then you can request the url in `product-category-classifier-chatbot/http-api/tests.http` if you've installed the [following plugin](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for VS code before. It will list all the messages that have been written in the Firebase database `messages`.
